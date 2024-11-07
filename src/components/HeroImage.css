@@ -110,12 +110,12 @@
 
 
 .card {
-  background-color: #8cdac6;
+  background-color: #00acc1;
   padding: 20px;
   margin-bottom: 15px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  border-left: 4px solid #00acc1;
+  border-left: 4px solid #005586;
   flex: 1; /* Permette alla card di adattarsi allo spazio disponibile */
   min-width: 280px; /* Imposta una larghezza minima */
   max-width: 100%; /* Evita che le card si espandano oltre la larghezza del contenitore */
@@ -124,13 +124,13 @@
 
 .card h2 {
   font-size: 1.5rem;
-  color: #00796b;
+  color: #ffffff;
   margin-bottom: 10px;
 }
 
 .card p {
   font-size: 1rem;
-  color: #004d40;
+  color: #ffffff;
 }
 
 /* Stile per le card più piccole */
