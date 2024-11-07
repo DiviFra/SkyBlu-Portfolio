@@ -1,0 +1,347 @@
+/* Stile per la sezione Hero */
+.hero {
+  background: linear-gradient(180deg, #cef5f5, #caecec, #e6e6e6);
+  padding: 50px 20px; 
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Permette la disposizione a colonna su schermi piccoli */
+}
+
+/* Contenitore della Hero */
+.hero-content {
+  display: flex;
+  align-items: flex-start;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap; /* Per schermi piccoli, avvolge gli elementi */
+}
+
+/* Sezione sinistra con immagine e testo */
+.hero-left {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 40px; /* Spazio tra immagine/testo e card */
+  flex: 1;
+  min-width: 250px; /* Garantisce che la sezione non sia troppo piccola */
+}
+
+.hero-image {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  margin-bottom: 30px;
+}
+
+.hero-image img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+  margin-bottom: 50px;
+  border: 4px solid #00acc1;
+}
+
+
+/* Stile per il testo */
+.hero-text h1 {
+  width: 400px;
+  font-size: 2rem;
+  color: #333;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+.hero-text p {
+  width: 700px;
+  max-height: 200px;
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 160px;
+  text-align: left; 
+  word-wrap: break-word; /* Fa andare a capo le parole lunghe */
+  flex: auto;
+}
+
+.hero-text2 {
+  width: 350px;
+  max-height: 400px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Stile per il testo */
+.hero-text2 h1 {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  word-wrap: break-word;
+  flex: auto;
+  display: none;
+}
+
+.hero-text2 p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 160px;
+  text-align: left; 
+  word-wrap: break-word; /* Fa andare a capo le parole lunghe */
+  display: none; /* Nasconde il testo per impostazione predefinita */
+}
+
+/* Sezione delle card */
+.edu-cards {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%; /* Assicura che le card riempiano lo spazio disponibile */
+}
+
+.about-cards {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: 100%; /* Assicura che le card riempiano lo spazio disponibile */
+}
+
+
+.card {
+  background-color: #8cdac6;
+  padding: 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #00acc1;
+  flex: 1; /* Permette alla card di adattarsi allo spazio disponibile */
+  min-width: 280px; /* Imposta una larghezza minima */
+  max-width: 100%; /* Evita che le card si espandano oltre la larghezza del contenitore */
+  box-sizing: border-box; /* Include padding e bordi nella dimensione totale */
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  color: #00796b;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #004d40;
+}
+
+/* Stile per le card più piccole */
+.small-card {
+  background-color: #ffffff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  flex: 1;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #00acc1;
+  box-sizing: border-box;
+  width: 80%;
+  min-width: 280px;
+  max-width: 100%;
+  flex: 1;
+}
+
+.small-card h2 {
+  font-size: 1rem;
+  color: #00796b;
+  margin-bottom: 6px;
+}
+
+.small-card p {
+  font-size: 0.8rem;
+  color: #004d40;
+  margin-bottom: 4px;
+}
+
+/* Timeline dot (pallino sotto alla card) */
+
+.timeline-dot {
+  width: 15px;
+  height: 15px;
+  background-color: #00acc1;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+} 
+
+.timeline-dot1 {
+  width: 15px;
+  height: 15px;
+  background-color: #00acc1;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -10px; /* Posiziona il dot sotto la card */
+  left: 50%;
+  transform: translateX(-50%); /* Centra il dot sotto la card */
+  z-index: 1;
+}
+
+
+/* Media Queries per rendere HeroImage responsive */
+@media (max-width: 1079px) {
+  .hero-content {
+    flex-direction: column; /* Dispone in verticale su schermi più piccoli */
+    align-items: center; /* Centra i contenuti */
+  }
+
+  .hero-left {
+    margin-left: 30px; /* Rimuove lo spazio extra */
+    align-items: center;
+    text-align: center;
+  }
+
+  .experience.hero-text{
+    max-height: 62px;
+  }
+
+  .edu-cards{
+    align-items: center;
+  }
+  
+  .about-cards {
+    align-items: center; /* Centra le card */
+  }
+
+  .card {
+    width: 80%; /* Mantiene le proporzioni e si adatta allo schermo */
+    max-width: 100%;
+  }
+
+  .small-card {
+    width: 100%; /* Larghezza adattata per schermi piccoli */
+  }
+
+  .timeline-dot{
+    margin-right: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-image img {
+    width: 250px;
+    height: 250px;
+    margin-right: 0;
+  }
+
+  .study-cards {
+    width: 80%;
+  }
+
+  .hero-text h1 {
+    display: none;
+  }
+
+  .hero-text p {
+    display: none;
+  }
+
+  .hero-text2 h1 {
+    font-size: 1.5rem;
+    display: flex;
+  }
+
+  .hero-text2 {
+    margin-bottom: 20px;
+  }
+
+  .hero-text2 p {
+    max-width: 400px;
+    max-height: 100px;
+    font-size: 1rem;
+    margin-bottom: 40px;
+    display: flex;
+  }
+
+  .card {
+    width: 80%;
+    max-width: 100%; /* Imposta larghezza massima al 100% */
+  }
+
+  .small-card {
+    width: 80%; /* Larghezza media su tablet */
+  }
+
+  .about-cards {
+    margin-bottom: 40px;
+  }
+
+  .timeline-dot{
+    margin-right: 50%;
+  }
+}
+
+
+@media (max-width: 1079px) {
+
+  .hero-image img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .hero-image  {
+    margin-bottom: -20px;
+
+  }
+
+  .study-cards {
+    width: 80%;
+  }
+
+  .hero-left {
+    width: 80%;
+  }
+
+  .hero-text2 {
+    width: 60%;
+    align-items: center;
+  }
+
+  .hero-text h1 {
+    display: none;
+  }
+
+  .hero-text p {
+    display: none;
+  }
+
+  .hero-text2 h1 {
+    font-size: 1.5rem;
+    display: flex;
+  }
+
+  .hero-text2 p {
+    font-size: 1rem;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .card {
+    width: 60%;
+    max-width: 100%; /* Imposta larghezza massima al 100% */
+  }
+
+  .small-card {
+    width: 60%; /* Larghezza media su tablet */
+  }
+
+  .about-cards {
+    margin-bottom: 40px;
+  }
+
+  .timeline-dot{
+    margin-right: 50%;
+  }
+
+}
